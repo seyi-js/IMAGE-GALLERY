@@ -1,38 +1,139 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html {
+  /* height: ; */
   text-align: center;
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+  background-image: url('https://dch81km8r5tow.cloudfront.net/wp-content/uploads/2020/10/SARS-958x559.jpeg');
+}
+.App{
+  background: #090909e6;
+    height: 100%;
+    min-height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section.images {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,30%);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image img {
+  width: 100%;
+  /* height: 10px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.image{
+  cursor:pointer;
+}
+
+.image:hover{
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.05);
+}
+section.popup{
+  position: fixed;
+  z-index: 9999999;
+  left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+section.popup img{
+  width:100%;
+}
+
+p.cancel{
   color: white;
+  font-size: 30px;
+  position: absolute;
+  /* z-index: 999999999999999999999999999; */
+  top: 10px;
+  right: 25px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+p.cancel:hover{
+  transition: all 0.5s ease-in-out;
+  color:white
+}
+
+
+header h1 {
+  padding-top: 30px;
+  /* line-height: 10px; */
+  color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h3.creator {
+  color: white;
+  font-family: 'Roboto Mono';
+}
+
+h3.creator a {
+    color: #f29820;
+}
+
+@media (max-width:500px){
+  section.images {
+    display: flex;
+    flex-direction: column;
+      
   }
-  to {
-    transform: rotate(360deg);
+  .image:hover{
+    transition: none;
+    transform: none;
+  }
+
+  section.popup{
+      max-height:70%;
+      width: 100%;
   }
 }
+section.bg {
+  background: #090806c2;
+  
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999999;
+  
+}
+@media (prefers-reduced-motion: no-preference) {
+  section.popup {
+    animation: App-logo-spin  0.6s ease-in;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+};
