@@ -116,7 +116,18 @@ h3.creator a {
     color: #f29820;
 }
 
-@media (max-width:500px){
+@media (max-width:768px){
+  section.popup{
+    
+    width: 70%;
+}
+
+section.popup img{
+  width:70%;
+}
+}
+
+@media (max-width:600px){
   section.images {
     grid-template-columns: repeat(3,30%);
       
@@ -128,9 +139,27 @@ h3.creator a {
 
   section.popup{
       /* max-height:70%; */
-      width: 70%;
+      width: 90%;
+  }
+
+  section.popup img{
+    width:90%;
   }
 }
+
+
+
+
+/* @media (max-width:400px){
+  section.popup{
+    
+    width: 90%;
+}
+
+section.popup img{
+  width:90%;
+}
+} */
 section.bg {
   background: #090806c2;
   
